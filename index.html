@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+<link rel="stylesheet" href="./Assets/CSS/styles.css">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+
+<div class="container" id="container">
+    <div class="formcontainer signup">
+        <form>
+            <h1>Create Account</h1>
+            <div class="social-container">
+            <i class="uil uil-google"></i>
+            <i class="uil uil-linkedin"></i>
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-github"></i>
+        </div>
+            <span>or use your email for Registration</span>
+            <input type="text" placeholder="Name" id="">
+            <input type="email" placeholder="Email" id="">
+            <input type="password" placeholder="Password" id="">
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="formcontainer signin">
+        <form>
+            <h1>Sign in</h1>
+             <div class="social-container">
+            <i class="uil uil-google"></i>
+            <i class="uil uil-linkedin"></i>
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-github"></i>
+        </div>
+            <span>or use your email password</span>
+            <input type="email" placeholder="Email" id="">
+            <input type="password" placeholder="Password" id="">
+            <a href="#">Forget Password </a>
+            <button>Sign In</button>
+        </form>
+    </div>
+    <div class="togglecontainer">
+        <div class="toggle">
+            <div class="togglepannel toggleleft">
+                <h1>Welcome bank</h1>
+                <p>Enter Your Personal Details to use all Site Features</p>
+                <button class="hidden" id="Login">Sign in</button>
+            </div>
+            <div class="togglepannel toggleright">
+                <h1>Hello, Friend!</h1>
+                <p>Register With Your Personal Details to use all Site Features</p>
+                <button class="hidden" id="register">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const container = document.querySelector(".container")
+    const registerBtn = document.querySelector("#register")
+    const loginBtn = document.querySelector("#Login")
+ registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+
+ });
+  loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+
+ });
+
+</script>
+</body>
+</html>
